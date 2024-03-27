@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('../static/z1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      height: 100vh;
+      margin: 0;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    #logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 600px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+    #download-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    {{error}}
+    <img id="logo" src="../static/grras.png" alt="Company Logo" />
+    <div class="input-container">
+      <form method="POST" action="/"> 
+         <input type="text" id="url" name="url" placeholder="Enter YouTube URL" />
+        <button id="download-button">Download</button>
+      </form>
+    
+    </div>
+  </div>
+</body>
+  </html>
+  
